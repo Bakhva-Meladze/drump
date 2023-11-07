@@ -45,7 +45,7 @@ body {
   border-color:blue;
   border-width:2px;
   background-color:white;
-  width:50%;
+  max-width:50%;
   left:25%;
   position:relative;
   height:300px;
@@ -62,9 +62,8 @@ h1 {
 }
 
 #drum-pad {
-  width: 300px;
+  max-width: 300px;
   height: 200px;
-  display: block;
   margin: auto;
   margin-top: 20px;
   padding: 5px;
@@ -95,7 +94,7 @@ h1 {
 #display {
   margin: auto;
   margin-top: 30px;
-  width: 300px;
+  max-width: 300px;
   background-color: white;
   padding: 20px;
   text-align: center;
