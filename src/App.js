@@ -73,31 +73,31 @@ class App extends React.Component {
               W
               <audio src={Clips.w} className="clip" id="W" />
             </button>
-            <button className={this.state.key ==="q"?"drum-pad red":"drum-pad"} id="Slap!" onClick={() => this.playSound("e")}>
+            <button className={this.state.key ==="e"?"drum-pad red":"drum-pad"} id="Slap!" onClick={() => this.playSound("e")}>
               E
               <audio src={Clips.e} className="clip" id="E" />
             </button>
-            <button className={this.state.key ==="q"?"drum-pad red":"drum-pad"} id="Bow" onClick={() => this.playSound("a")}>
+            <button className={this.state.key ==="a"?"drum-pad red":"drum-pad"} id="Bow" onClick={() => this.playSound("a")}>
               A
               <audio src={Clips.a} className="clip" id="A" />
             </button>
-            <button className={this.state.key ==="q"?"drum-pad red":"drum-pad"}id="Ooooh" onClick={() => this.playSound("s")}>
+            <button className={this.state.key ==="s"?"drum-pad red":"drum-pad"}id="Ooooh" onClick={() => this.playSound("s")}>
               S
               <audio src={Clips.s} className="clip" id="S" />
             </button>
-            <button className={this.state.key ==="q"?"drum-pad red":"drum-pad"} id="Phew!" onClick={() => this.playSound("d")}>
+            <button className={this.state.key ==="d"?"drum-pad red":"drum-pad"} id="Phew!" onClick={() => this.playSound("d")}>
               D
               <audio src={Clips.d} className="clip" id="D" />
             </button>
-            <button className={this.state.key ==="q"?"drum-pad red":"drum-pad"} id="Tssss" onClick={() => this.playSound("z")}>
+            <button className={this.state.key ==="z"?"drum-pad red":"drum-pad"} id="Tssss" onClick={() => this.playSound("z")}>
               Z
               <audio src={Clips.z} className="clip" id="Z" />
             </button>
-            <button className={this.state.key ==="q"?"drum-pad red":"drum-pad"} id="Pum" onClick={() => this.playSound("x")}>
+            <button className={this.state.key ==="x"?"drum-pad red":"drum-pad"} id="Pum" onClick={() => this.playSound("x")}>
               X
               <audio src={Clips.x} className="clip" id="X" />
             </button>
-            <button className={this.state.key ==="q"?"drum-pad red":"drum-pad"} id="Ka-ching" onClick={() => this.playSound("c")}>
+            <button className={this.state.key ==="c"?"drum-pad red":"drum-pad"} id="Ka-ching" onClick={() => this.playSound("c")}>
               C
               <audio src={Clips.c} className="clip" id="C" />
             </button>
