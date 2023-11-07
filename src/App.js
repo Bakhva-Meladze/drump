@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import React from "react";
 
-const Clips = { q:"https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3",
+const Clips = {
+  q:"https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3",
   w:"https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3",
   e:"https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3",
   a:"https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3",
@@ -14,7 +15,7 @@ const Clips = { q:"https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3",
 }
 const Message = {
   q:"one",
-  w:"wto",
+  w:"two",
   e:"three",
   a:"four",
   s:"five",
@@ -50,8 +51,11 @@ class App extends React.Component {
     }
   }
   playSound(key) {
+
+
     this.setState({
-      message: Message[key]
+      message: Message[key],
+      key: key
     })
     document.getElementById(key.toUpperCase()).play()
   }
@@ -60,39 +64,40 @@ class App extends React.Component {
         <div id ="drum-machine">
           <h1>The Machine<sup className="circle">&reg;</sup></h1>
           <div id="drum-pad">
-            <button className="drum-pad" id="Boom" onClick={() => this.playSound("q")}>
+            <button className={this.state.key ==="q"?"drum-pad red":"drum-pad"}
+                    id="Boom" onClick={() => this.playSound("q")}>
               Q
               <audio src={Clips.q} className="clip" id="Q" />
             </button>
-            <button className="drum-pad" id="Pow" onClick={() => this.playSound("w")}>
+            <button className={this.state.key ==="w"?"drum-pad red":"drum-pad"} id="Pow" onClick={() => this.playSound("w")}>
               W
               <audio src={Clips.w} className="clip" id="W" />
             </button>
-            <button className="drum-pad" id="Slap!" onClick={() => this.playSound("e")}>
+            <button className={this.state.key ==="q"?"drum-pad red":"drum-pad"} id="Slap!" onClick={() => this.playSound("e")}>
               E
               <audio src={Clips.e} className="clip" id="E" />
             </button>
-            <button className="drum-pad" id="Bow" onClick={() => this.playSound("a")}>
+            <button className={this.state.key ==="q"?"drum-pad red":"drum-pad"} id="Bow" onClick={() => this.playSound("a")}>
               A
               <audio src={Clips.a} className="clip" id="A" />
             </button>
-            <button className="drum-pad" id="Ooooh" onClick={() => this.playSound("s")}>
+            <button className={this.state.key ==="q"?"drum-pad red":"drum-pad"}id="Ooooh" onClick={() => this.playSound("s")}>
               S
               <audio src={Clips.s} className="clip" id="S" />
             </button>
-            <button className="drum-pad" id="Phew!" onClick={() => this.playSound("d")}>
+            <button className={this.state.key ==="q"?"drum-pad red":"drum-pad"} id="Phew!" onClick={() => this.playSound("d")}>
               D
               <audio src={Clips.d} className="clip" id="D" />
             </button>
-            <button className="drum-pad" id="Tssss" onClick={() => this.playSound("z")}>
+            <button className={this.state.key ==="q"?"drum-pad red":"drum-pad"} id="Tssss" onClick={() => this.playSound("z")}>
               Z
               <audio src={Clips.z} className="clip" id="Z" />
             </button>
-            <button className="drum-pad" id="Pum" onClick={() => this.playSound("x")}>
+            <button className={this.state.key ==="q"?"drum-pad red":"drum-pad"} id="Pum" onClick={() => this.playSound("x")}>
               X
               <audio src={Clips.x} className="clip" id="X" />
             </button>
-            <button className="drum-pad" id="Ka-ching" onClick={() => this.playSound("c")}>
+            <button className={this.state.key ==="q"?"drum-pad red":"drum-pad"} id="Ka-ching" onClick={() => this.playSound("c")}>
               C
               <audio src={Clips.c} className="clip" id="C" />
             </button>
